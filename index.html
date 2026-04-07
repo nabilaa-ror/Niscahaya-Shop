@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Niscahaya Shop</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background-color: #fdeee6;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 40px;
+            background-color: #f2c6b3;
+        }
+        
+        .name {
+            font-weight: bold;
+            font-size: 20px;
+            color: #8b5e3c;
+        }
+        
+        .nav-menu {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+        }
+        
+        .nav-menu a {
+            text-decoration: none;
+            color: #000000;
+            font-weight: 500;
+        }
+        
+        .navbar-toggler {
+            border: none;
+        }
+
+        .judul {
+            position: relative;
+            height: 500px;
+            background-image: url("https://images.unsplash.com/photo-1738225734433-9fb17ed770a4?q=80&w=1074&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+            background-size: cover;
+            background-position: center;
+        }
+        
+        .jdl {
+            position: absolute;
+            inset: 0;
+            background-color: rgba(0,0,0,0.3);
+        }
+        
+        .judul-text {
+            position: relative;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            text-align: center;
+        }
+        
+        .judul-text h1 {
+            font-size: 36px;
+            letter-spacing: 2px;
+        }
+        
+        .about 
+        
+        .about h2 {
+            color:#ff9f6e;
+        }
+
+        .about p{
+            color:#8b5e3c; 
+            max-width:600px; 
+            margin:auto;
+        }
+
+        .produk {
+            padding: 50px 20px;
+            text-align: center;
+        }
+        
+        .produk h2 {
+            color: #ff9f6e;
+            margin-bottom: 30px;
+        }
+
+        .produk-container {
+            display: flex;
+            justify-content: center;
+            gap: 40px; 
+        }
+        
+        .prdk {
+            background-color: #e8cfc2;
+            padding: 15px;
+            border-radius: 20px;
+            width: 220px;
+            margin: 0; 
+        }
+        
+        .prdk img {
+            width: 100%;
+            height: 200px;
+            border-radius: 15px;
+        }
+        
+        .prdk p {
+            margin-top: 10px;
+            font-weight: bold;
+            color: #8b5e3c;
+        }
+
+        .carousel-item {
+            padding: 10px 0;
+        }
+        
+        .carousel-control-prev-icon, .carousel-control-next-icon {
+            filter: invert(1);
+        }
+        
+        .faq {
+            padding: 40px 20px;
+            background-color: #ffe3d3;
+            text-align: center;
+        }
+        
+        .faq h2 {
+            margin-bottom: 25px;
+            color: white;
+            text-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+        }
+        
+        .faq-accordion {
+            max-width: 650px;
+            margin: 0 auto;
+        }
+        
+        .accordion-item {
+            background-color: #ffc6a6;
+            border-radius: 20px;
+            overflow: hidden;
+            border: none;
+            margin-bottom: 10px;
+        }
+        
+        .accordion-button {
+            background-color: #ffc6a6;
+            color: white;
+            font-weight: bold;
+        }
+        
+        .accordion-button:not(.collapsed) {
+            background-color: #ffb38a;
+            color: white;
+            box-shadow: none;
+        }
+        
+        .accordion-body {
+            color: white;
+            background-color: #ffc6a6;
+        }
+        
+        .form {
+            padding: 50px 20px;
+            background-color: #fdeee6;
+        }
+        
+        .form h2 {
+            text-align: center;
+            color: #ff9f6e;
+            margin-bottom: 30px;
+        }
+        
+        .form-card {
+            max-width: 600px;
+            margin: auto;
+            background-color:#f6d9c8;
+            padding: 25px;
+            border-radius: 20px;
+        }
+        
+        .form-control, .form-select {
+            border-radius: 10px;
+        }
+        
+        .btn-custom {
+            background-color: #f8b492;
+            color: white;
+            font-weight: bold;
+            border-radius: 10px;
+        }
+        
+        .btn-custom:hover {
+            background-color: #fbb89c;
+            color: #857e79;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 15px;
+            background-color: #f2c6b3;
+            color: #8b5e3c;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>  
+
+<nav class="navbar navbar-expand-lg fixed-top">
+    <div class="container-fluid">
+        <div class="name">Niscahaya Shop</div>
+        <button class="navbar-toggler" type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarMenu">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarMenu">
+            <ul class="nav-menu ms-auto">
+                <li><a href="#">Beranda</a></li>
+                <li><a href="#about">Tentang Kami</a></li>
+                <li><a href="#produk">Produk</a></li>
+                <li><a href="#faq">FAQ</a></li>
+                <li><a href="#form">Pemesanan</a></li>
+                <li><a href="#kontak">Kontak </a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<section class="judul">
+    <div class="jdl"></div>
+    <div class="judul-text">
+        <h1>JAJANAN PASAR</h1>
+        <p>MENDUKUNG UMKM DENGAN PRODUK TERBAIK</p>
+    </div>
+</section>
+
+<section id="about" class="py-5 text-center" style="background-color:#ffe3d3;">
+    <div class="container">
+        <h2>Tentang Kami</h2>
+        <p>
+            Niscahaya Shop adalah usaha UMKM yang menyediakan berbagai jajanan pasar 
+            dengan kualitas terbaik dan dibuat secara handmade.
+        </p>
+    </div>
+</section>
+
+<section id="produk" class="produk">
+    <h2>Produk</h2>
+    <div id="produkCarousel" class="carousel slide" data-bs-ride="false">
+        <div class="carousel-inner">
+
+            <div class="carousel-item active">
+                <div class="produk-container">
+                    <div class="prdk">
+                        <img src="https://i.pinimg.com/736x/71/0f/52/710f528ac49f9b7a061ffa3d54a7c12c.jpg">
+                        <p>Rp. 1.000,00/pcs</p>
+                    </div>
+
+                    <div class="prdk">
+                        <img src="https://i.pinimg.com/1200x/cf/77/a6/cf77a62d2e8ac2a9c24af5f74972b95e.jpg">
+                        <p>Rp. 1.000,00/pcs</p>
+                    </div>
+
+                    <div class="prdk">
+                        <img src="https://i.pinimg.com/1200x/4c/a9/65/4ca9650e053a61ac460a8ff6a0a20032.jpg">
+                        <p>Rp. 1.000,00/pcs</p>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="produk-container">
+                    <div class="prdk">
+                        <img src="https://i.pinimg.com/736x/5b/b5/5d/5bb55d7943f0321f738395feec943e00.jpg">
+                        <p>Rp. 1.000,00/pcs</p>
+                    </div>
+
+                    <div class="prdk">
+                        <img src="https://i.pinimg.com/736x/34/bf/e5/34bfe50813ab44470246c95aab68fde0.jpg">
+                        <p>Rp. 1.000,00/pcs</p>
+                    </div>
+
+                    <div class="prdk">
+                        <img src="https://i.pinimg.com/736x/98/0c/6b/980c6b55ad35c4630714f5d7be2ae0d3.jpg">
+                        <p>Rp. 1.000,00/pcs</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <button class="carousel-control-prev" type="button" data-bs-target="#produkCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+        </button>
+
+        <button class="carousel-control-next" type="button" data-bs-target="#produkCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon"></span>
+        </button>
+    </div>
+</section>
+
+<section id="faq" class="faq">
+    <h2>FAQ</h2>
+     <div class="accordion accordion-flush faq-accordion" id="faqAccordion">
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="1faq">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1" aria-expanded="true" aria-controls="faq1">
+                    1. Apakah produk yang dijual dibuat dengan tangan?
+                </button>
+            </h2>
+            <div id="faq1" class="accordion-collapse collapse" aria-labelledby="1faq" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                    Ya, tentu saja. Semua produk jajanan pasar kami dibuat secara handmade dengan bahan pilihan.
+                </div>
+            </div>
+        </div>
+
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="2faq">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2" aria-expanded="true" aria-controls="faq2">
+                    2. Apakah bisa melakukan delivery?
+                </button>
+            </h2>
+            <div id="faq2" class="accordion-collapse collapse"  aria-labelledby="2faq" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                    Bisa. Silakan hubungi kami untuk informasi pengantaran dan pemesanan.
+                </div>
+            </div>
+        </div>
+
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="3faq">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">
+                    3. Apakah bisa pesan dalam jumlah banyak?
+                </button>
+            </h2>
+            <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                Bisa, kami melayani pemesanan dalam jumlah banyak untuk acara tertentu.
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="form" class="form">
+    <h2>Form Pemesanan</h2>
+
+    <div class="form-card shadow">
+        <form>
+            <div class="mb-3">
+                <label class="form-label">Nama Lengkap</label>
+                <input type="text" class="form-control" placeholder="Masukkan nama">
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">Nomor WhatsApp</label>
+                <input type="tel" class="form-control" placeholder="08xxxxxxxxxx">
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">Pilih Produk</label>
+                <select class="form-select">
+                    <option selected>Pilih produk</option>
+                    <option>Kue Tradisional</option>
+                    <option>Jajanan Basah</option>
+                    <option>Snack Pasar</option>
+                </select>
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">Jumlah Pesanan</label>
+                <input type="number" class="form-control" placeholder="Jumlah pcs">
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">Catatan</label>
+                <textarea class="form-control" rows="3" placeholder="Catatan tambahan"></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-custom w-100">
+                Kirim Pesanan
+            </button>
+        </form>
+    </div>
+</section>
+
+<section id="kontak" class="py-5 text-center" style="background-color:#ffe3d3;">
+    <div class="container">
+        <h2 style="color:#ff9f6e;">Kontak Kami</h2>
+        <p style="color:#8b5e3c; margin-bottom:30px;">
+            Hubungi kami untuk pemesanan atau informasi lebih lanjut
+        </p>
+
+        <div class="row justify-content-center">
+            <div class="col-md-4 mb-3">
+                <div class="p-3" style="background:#ffc6a6; border-radius:15px; color:white;">
+                    <h5>📱 WhatsApp</h5>
+                    <p>08xxxxxxxxxx</p>
+                </div>
+            </div>
+
+            <div class="col-md-4 mb-3">
+                <div class="p-3" style="background:#ffc6a6; border-radius:15px; color:white;">
+                    <h5>📍 Alamat</h5>
+                    <p>Palembang, Sumatera Selatan</p>
+                </div>
+            </div>
+
+            <div class="col-md-4 mb-3">
+                <div class="p-3" style="background:#ffc6a6; border-radius:15px; color:white;">
+                    <h5>📧 Email</h5>
+                    <p>niscahayashop@gmail.com</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer class="footer">
+    <p>© 2026 Niscahaya Shop</p>
+    <p>Jajanan pasar berkualitas & homemade</p>
+</footer>
+
+</body>
+</html>
